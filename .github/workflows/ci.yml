@@ -1,9 +1,14 @@
 name: CI
 
 on:
-    pull_request:
+  pull_request:
         branches:
             - develop
+        paths-ignore:
+          - 'README.ms'
+
+
+
 
 jobs: 
     test: 
@@ -35,4 +40,4 @@ jobs:
 
         - name: Rodar o build
           run: npm run build
-
+        
